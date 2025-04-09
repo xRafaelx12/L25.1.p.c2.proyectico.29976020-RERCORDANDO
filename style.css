@@ -1,0 +1,71 @@
+table {
+    border-collapse: collapse;
+    width: 100%; /* Si decides usarlo */
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px; /* Añade un margen para separar los inputs */
+}
+
+section {
+    border: 1px solid black;
+    margin-top: 10px;
+    padding: 10px; /* Añade un poco de espacio interno */
+}
+
+.tablas-container {
+    display: flex;
+}
+
+
+/* Asegúrate de que esto esté en style.css o en una etiqueta <style> en el <head> */
+#zonaOfInputs, #zoneOfInputs2 {
+    display: inline-block; /* Hace que las secciones se alineen en línea */
+    vertical-align: top;   /* Alinea las secciones desde la parte superior */
+    width: 35%;            /* Establece un ancho para cada sección */
+    margin: 1%;            /* Agrega un margen para separación */
+    box-sizing: border-box; /* Incluye padding y bordes en el ancho total */
+}
+
+body {
+    display: flex;         /* Usa flexbox para la disposición */
+    justify-content: center; /* Centra horizontalmente */
+    flex-wrap: wrap;      /* Permite el ajuste cuando no hay espacio */
+}
+
+#allTheTables {
+    display: flex;          /* Utiliza flexbox para la disposición */
+    justify-content: space-between; /* Espacio entre las secciones */
+    flex-wrap: wrap;       /* Permite que se ajusten si no hay espacio suficiente */
+}
+
+.tablas-container {
+    flex: 1;               /* Permite que ambos contenedores tomen el mismo espacio */
+    margin: 0 10px;       /* Margen horizontal para separación */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Un poco de sombra para profundidad */
+    padding: 10px;        /* Padding interno para mayor espacio visual */
+}
+
+.tablas-grupo {
+    display: flex;
+    flex-direction: column; /* Asegura que las tablas aparezcan de arriba hacia abajo dentro del grupo */
+}
+
+table {
+    width: 100%;           /* Asegura que cada tabla ocupe todo el ancho del contenedor */
+    margin-bottom: 10px;  /* Espacio entre las tablas */
+    border-collapse: collapse; /* Colapsa bordes de las tablas */
+}
+
+th {
+    background: #f2f2f2;  /* Color de fondo para los encabezados */
+    padding: 10px;        /* Espaciado interno del encabezado */
+    text-align: left;     /* Alineación del texto a la izquierda */
+    border: 1px solid #ccc; /* Borde para las celdas del encabezado */
+}
