@@ -1,9 +1,11 @@
 export default class Cl_mCliente{
     constructor(codigo,costo){
+        //properties
         this.codigo=codigo
         this.costo=costo
     }
 
+    //set and get to establized all 
     set codigo(codigo){
         this._codigo=+codigo
     }

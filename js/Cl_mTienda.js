@@ -1,23 +1,25 @@
 export default class Cl_mTienda{
     constructor(){
+        // properties to save important information 
         this.counterTotalPhotografi=0
         this.counterTotalVideo=0
         this.TotalStore=0
         this.counterDigitalPicture=0
         this.subTotalDigitalPicture=0
-        this.AvaregeDigitalSells=0
+        this.counterKindOfPicture=0
     }
 
     //METHOD TO PROCESS  IN THE MODEL PHOTOGRAFI
     processAndSaveDataInFotografia(fotografia){
-        this.counterTotalPhotografi+=this.fotografia.totalPayedByClientes()
-        if(fotografia.tipoFoto===1){
-            this.counterDigitalPicture++
-        }
+        this.counterTotalPhotografi+=fotografia.totalPayedByClientes()
+        this.counterKindOfPicture++
 
-        if(fotografia.tipoFoto===1){
+        if(fotografia.tipoFoto==="D"){
+            this.counterDigitalPicture++
             this.subTotalDigitalPicture+=fotografia.totalPayedByClientes()
         }
+
+
 
         
     }
@@ -25,7 +27,7 @@ export default class Cl_mTienda{
 
         //METHOD TO PROCESS IN THE MODEL VIDEO
     processAndSaveDataInVideo(video){
-        this.counterTotalVideo+=video,totalPayedByClientes()
+        this.counterTotalVideo+=video.totalPayedByClientes()
     }
 
 
@@ -38,11 +40,11 @@ export default class Cl_mTienda{
 
     //SHOW ALL THE TOTAL PAYED BY CLIENTS ACCORDING TO SERVICES
     methodToshowTotalVideo(){
-        return this.counterTotalVideo
+        return (this.counterTotalVideo)
     }
 
     methodToshowTotalPhotografi(){
-        return this.counterTotalPhotografi
+        return (this.counterTotalPhotografi)
     }
     //SHOW ALL THE TOTAL PAYED BY CLIENTS ACCORDING TO SERVICES 
 
@@ -51,19 +53,19 @@ export default class Cl_mTienda{
 
 
     methodToshowTotalSells(){
-        return this.counterDigitalPicture
+        return (this.methodToshowTotalVideo()+this.methodToshowTotalPhotografi())
     }
 
     methodToShowNumberDigitalsPicture(){
-        return this.counterDigitalPicture
+        return (this.counterDigitalPicture)
     }
 
     methodToShowSubTotalDigitalPictures(){
-        return this.subTotalDigitalPicture
+        return (this.subTotalDigitalPicture).toFixed(2)
     }
 
     methodToShowAvarageDigitalSells(){
-        return this.AvaregeDigitalSells
+        return (this.subTotalDigitalPicture/this.counterKindOfPicture).toFixed(2)
     }
     
     //METHODS TO SHOW THE DATA 

@@ -1,11 +1,13 @@
 table {
     border-collapse: collapse;
-    width: 100%; /* Si decides usarlo */
+    width: 100%; 
+    
 }
 
 th, td {
     border: 1px solid black;
     text-align: center;
+    
 }
 
 input {
@@ -17,6 +19,7 @@ section {
     border: 1px solid black;
     margin-top: 10px;
     padding: 10px; /* Añade un poco de espacio interno */
+    background-color: #d0dde275; /* Fondo gris claro para destacar */
 }
 
 
@@ -56,6 +59,7 @@ body {
     padding: 12px;                   /* Opcional: Espaciado */
     border-radius: 10px;              /* Opcional: Bordes redondeados */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para diferenciar */
+    background-color: #3b261575; /* Fondo gris claro para destacar */
 }
 
 .horizontal-tables {
@@ -69,6 +73,7 @@ table {
     width: auto;                     /* Ajustar ancho de cada tabla al contenido */
     border: 1px solid #000000;          /* Borde de las tablas */
     text-align: center;              /* Centrar contenido */
+    
 }
 
 th {
@@ -80,4 +85,15 @@ th {
 h2 {
     text-align: center;              /* Centrar títulos */
     margin-bottom: 15px;             /* Espaciado bajo títulos */
+}
+
+#totales {
+    margin-top: 20px; /* Añade un espacio superior para separar del contenido anterior */
+    padding: 10px; /* Añade espacio interno */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border: 1px solid #000; /* Borde opcional */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #d0dde275; /* Fondo gris claro para destacar */
+    text-align: left; /* Alinea el texto a la izquierda */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave opcional */
 }

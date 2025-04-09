@@ -1,8 +1,7 @@
-import Cl_mFotografia from "./Cl_mFotografia.js";
 
 export default class Cl_vFotografia{
     constructor(){
-        this.controller=null
+        //   properties to conect the html with the java script 
         this.inCodigo=document.getElementById("inCodigo1")
         this.inCosto=document.getElementById("inCosto1")
         this.tabla1=document.getElementById("tabla1op")
@@ -15,11 +14,11 @@ export default class Cl_vFotografia{
         this.btProcessData=document.getElementById("btProcesarDataPhotografi")
         this.inTipoFotogracia=document.getElementById("inTipoFotografia")
 
-        this.instanceVFotograica= new Cl_vFotografia()
-        this.instanceVFotograica.btProcessData.onclick = () => this.controller.processDataAndAddFotografia()
+        
     }
 
-    get incodicoExtractValue(){
+        // get to extract the value of the boxed in the html 
+    get incodigoExtractValue(){
         return this.inCodigo.value
     }
 
@@ -31,42 +30,6 @@ export default class Cl_vFotografia{
         return this.inTipoFotogracia.value
     }
 
-    processModelFotografia(){
-        this.iModelFotografia= new Cl_mFotografia(this.instanceVFotograica.incodicoExtractValue,this.instanceVFotograica.inCostoExtractValue,this.instanceVFotograica.inTipoFotograciaExtractValue)
-        return this.iModelFotografia 
-    }
-
-
-    reportHtmlFotografia(total){
-        
-        this.tabla1.innerHTML+=`<tr>
-        <td>${this.iModelFotografia.codigo}</td>
-        </tr>`
-
-        this.tabla2.innerHTML+=`<tr>
-        <td>${this.iModelFotografia.costo}</td>
-        </tr>`
-
-        this.tabla3.innerHTML+=`<tr>
-        <td>${this.iModelFotografia.tipoFoto}</td>
-        </tr>`
-
-        this.tabla4.innerHTML+=`<tr>
-        <td>${this.iModelFotografia.descuento()}</td>
-        </tr>`
-
-        this.tabla5.innerHTML+=`<tr>
-        <td>${this.iModelFotografia.incremento()}</td>
-        </tr>`
-
-        this.tabla6.innerHTML+=`<tr>
-        <td>${this.iModelFotografia.preciototal()}</td>
-        </tr>`
-
-        this.opTotal.innerHTML=total
-        
-
-
-    }
+    
 
 }

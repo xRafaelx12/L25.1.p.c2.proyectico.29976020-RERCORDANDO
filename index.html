@@ -114,10 +114,19 @@
         </div>
     </section>
 
+    <section id="totales">
+        <p>monto total facturado <span id="opTotalSelled"></span></p>
+        <p>El número de fotos digitales vendidas es de <span id="opNumberDigitalPicture"></span></p>
+        <p>Sub total fotos digitales <span id="opSubTotalDigitalPicture">$</span></p>
+        <p>Promedio ventas digitales <span id="opAverageSelledDigitalPicture">$</span></p>
+    </section>
+
 </body>
 
-<script type="module" 
-src="./main.js"></script>
-
+<script type="module">
+    import principal from "./js/principal.js";
+    new principal()
+  </script>
+  
 
 </html>

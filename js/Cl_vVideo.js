@@ -3,7 +3,7 @@ import Cl_mVideo from "./Cl_mVideo.js";
 export default class Cl_vVideo{
 
     constructor(){
-        this.controller=null
+         //   properties to conect the html with the java script 
         this.inCodigo=document.getElementById("inCodigo2")
         this.inCosto=document.getElementById("inCosto2")        
         this.tabla1=document.getElementById("tablaop1")
@@ -15,12 +15,11 @@ export default class Cl_vVideo{
         this.opTotal=document.getElementById("opTotal2")
         this.inHd=document.getElementById("inHd")
 
-        this.instanceViewVIdeo= new Cl_vVideo()
-        this.instanceViewVIdeo.btProcessDataInVideo.onclick = ()=>this.controller.processDataAndAdddVideo()
+        
     }
 
-
-    get incodicoExtractValue(){
+// get to extract the value of the boxed in the html 
+    get incodigoExtractValue(){
         return this.inCodigo.value
     }
 
@@ -32,37 +31,7 @@ export default class Cl_vVideo{
         return this.inHd.value
     }
 
-    processModelVideo(){
-        this.instanceModelVideo= new Cl_mVideo(this.incodicoExtractValue,this.inCostoExtractValue,this.inHdExtractValue)
-        return this.instanceModelVideo
-    }
 
-    reportHtmlVideo(total){
-
-        this.tabla1.innerHTML+=`<tr>
-        <td>${this.instanceModelVideo.codigo}</td>
-        </tr>`
-
-        this.tabla2.innerHTML+=`<tr>
-        <td>${this.instanceModelVideo.costo}</td>
-        </tr>`
-
-        this.tabla3.innerHTML+=`<tr>
-        <td>${this.instanceModelVideo.hd}</td>
-        </tr>`
-
-        this.tabla4.innerHTML+=`<tr>
-        <td>${this.instanceModelVideo.calculatedIncrease()}</td>
-        </tr>`
-
-        this.tabla5.innerHTML+=`<tr>
-        <td>${this.instanceModelVideo.totalPayedByClientes()}</td>
-        </tr>`
-
-
-
-        this.opTotal.innerHTML=total
-    }
 
 
 
