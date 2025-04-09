@@ -19,9 +19,7 @@ section {
     padding: 10px; /* Añade un poco de espacio interno */
 }
 
-.tablas-container {
-    display: flex;
-}
+
 
 
 /* Asegúrate de que esto esté en style.css o en una etiqueta <style> en el <head> */
@@ -40,32 +38,46 @@ body {
 }
 
 #allTheTables {
-    display: flex;          /* Utiliza flexbox para la disposición */
-    justify-content: space-between; /* Espacio entre las secciones */
-    flex-wrap: wrap;       /* Permite que se ajusten si no hay espacio suficiente */
+    display: flex;                   /* Usar Flexbox para disposición general */
+    justify-content: space-between;  /* Separar los grupos horizontalmente */
+    margin: 20px 0;                  /* Margen superior e inferior */
 }
 
 .tablas-container {
-    flex: 1;               /* Permite que ambos contenedores tomen el mismo espacio */
-    margin: 0 10px;       /* Margen horizontal para separación */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Un poco de sombra para profundidad */
-    padding: 10px;        /* Padding interno para mayor espacio visual */
+    display: flex;                   /* Flexbox para alinear los contenedores */
+    gap: px;                       /* Espacio entre grupos de tablas */
 }
 
 .tablas-grupo {
     display: flex;
-    flex-direction: column; /* Asegura que las tablas aparezcan de arriba hacia abajo dentro del grupo */
+    flex-direction: column;          /* Elementos de cada grupo ordenados verticalmente */
+    width: 49%;                      /* Cada grupo ocupa 48% del ancho disponible */
+    border: 1px solid #000000;          /* Opcional: Agregar borde de grupo */
+    padding: 12px;                   /* Opcional: Espaciado */
+    border-radius: 10px;              /* Opcional: Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para diferenciar */
+}
+
+.horizontal-tables {
+    display: flex;                   /* Alinear tablas horizontalmente */
+    flex-wrap: wrap;                 /* Permitir que las tablas salten a nueva línea si no hay espacio */
+    gap: 15px;                       /* Espaciado entre tablas */
 }
 
 table {
-    width: 100%;           /* Asegura que cada tabla ocupe todo el ancho del contenedor */
-    margin-bottom: 10px;  /* Espacio entre las tablas */
-    border-collapse: collapse; /* Colapsa bordes de las tablas */
+    border-collapse: collapse;       /* Bordes colapsados */
+    width: auto;                     /* Ajustar ancho de cada tabla al contenido */
+    border: 1px solid #000000;          /* Borde de las tablas */
+    text-align: center;              /* Centrar contenido */
 }
 
 th {
-    background: #f2f2f2;  /* Color de fondo para los encabezados */
-    padding: 10px;        /* Espaciado interno del encabezado */
-    text-align: left;     /* Alineación del texto a la izquierda */
-    border: 1px solid #ccc; /* Borde para las celdas del encabezado */
+    padding: 1px;                   /* Espaciado interno */
+    background: #beb3b3;             /* Fondo gris claro en los encabezados */
+    border-bottom: 1px solid #332e2e;   /* Borde inferior */
+}
+
+h2 {
+    text-align: center;              /* Centrar títulos */
+    margin-bottom: 15px;             /* Espaciado bajo títulos */
 }

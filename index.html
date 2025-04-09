@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recordando xd</title>
-    <link rel="stylesheet" href="style.css"/>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recordando xd</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
 <body>
     <section id="zonaOfInputs">
 
 
     <h1>Datos de la fotografia</h1>
     <label>codigo de la fotografia</label>
-    <input type="text" id="inCodigo" placeholder="codigo del cliente"/>
+    <input type="text" id="inCodigo1" placeholder="codigo del cliente"/>
 
     <label>costo de los servicios</label>
-    <input type="text" id="inCosto" placeholder="costo por los servicios"/>
+    <input type="text" id="inCosto1" placeholder="costo por los servicios"/>
     
     <label>tipo de fotografia</label>
     <input id="inTipoFotografia" placeholder="tipo de fotografia"/>
+
     <button id="btProcesarDataPhotografi">procesar fotografia</button>
     </section>
     
@@ -26,10 +28,10 @@
     <section id="zoneOfInputs2">
         <h1>Datos del video</h1>
         <label>codigo de la fotografia</label>
-        <input type="text" id="inCodigo" placeholder="codigo del cliente"/>
+        <input type="text" id="inCodigo2" placeholder="codigo del cliente"/>
 
         <label>costo de los servicios</label>
-        <input type="text" id="inCosto" placeholder="costo por los servicios"/>
+        <input type="text" id="inCosto2" placeholder="costo por los servicios"/>
 
         
         <label>tipo de video</label>
@@ -40,84 +42,82 @@
 
     <section id="allTheTables">
         <div class="tablas-container">   
-            <div class="tablas-grupo"> <!-- Grupo de tablas de fotografía -->
-                <table id="tabla1op">
-                    <tr>
-                        <th>Codigo del cliente</th>
-                    </tr>
-                </table>
-    
-                <table id="tabla2op">
-                    <tr>
-                        <th>Costo del cliente</th>
-                    </tr>
-                </table>
-    
-                <table id="tabla3op">
-                    <tr>
-                        <th>Tipo de fotografía</th>
-                    </tr>
-                </table>
-    
-                <table id="tabla4op">
-                    <tr>
-                        <th>Monto del descuento</th>
-                    </tr>
-                </table>
-    
-                <table id="tabla5op">
-                    <tr>
-                        <th>Monto del incremento</th>
-                    </tr>
-                </table>
-    
-                <table id="tabla6op">
-                    <tr>
-                        <th>Monto total a cancelar</th>
-                    </tr>
-                </table>
+            <div class="tablas-grupo">   
+                <h2>Datos de los cliente de foto</h2>
+                
+                <div class="horizontal-tables">
+                    <table id="tabla1op"> 
+                        <tr>
+                            <th>Codigo del cliente</th>
+                        </tr>
+                    </table>
+                    <table id="tabla2op">
+                        <tr>
+                            <th>Costo del cliente</th>
+                        </tr>
+                    </table>
+                    <table id="tabla3op">
+                        <tr>
+                            <th>Tipo de fotografía</th>
+                        </tr>
+                    </table>
+                    <table id="tabla4op">
+                        <tr>
+                            <th>Monto del descuento</th>
+                        </tr>
+                    </table>
+                    <table id="tabla5op">
+                        <tr>
+                            <th>Monto del incremento</th>
+                        </tr>
+                    </table>
+                    <table id="tabla6op">
+                        <tr>
+                            <th>Monto total a cancelar</th>
+                        </tr>
+                    </table>
+                </div>
+                <p>Total cancelado por clientes de fotografía: <span id="opTotal"></span></p>
             </div>
-    
-            <p>El total cancelado por todos los clientes de fotografía es de <span id="opTotal"></span></p>
-        </div>
-    
-        <div class="tablas-container">   
-            <div class="tablas-grupo"> <!-- Grupo de tablas de video -->
-                <table id="tabla1op2">
-                    <tr>
-                        <th>Codigo del cliente</th>
-                    </tr>
-                </table>
-    
-                <table id="tabla2op2">
-                    <tr>
-                        <th>Costo del cliente</th>
-                    </tr>
-                </table>
-    
-                <table id="tabla3op2">
-                    <tr>
-                        <th>Tipo de video</th>
-                    </tr>
-                </table>
-    
-                <table id="tabla4op2">
-                    <tr>
-                        <th>Monto del incremento</th>
-                    </tr>
-                </table>
-    
-                <table id="tabla5op2">
-                    <tr>
-                        <th>Total a pagar</th>
-                    </tr>
-                </table>
+
+            <div class="tablas-grupo">   
+                <h2>Datos de los cliente de video</h2>
+                <div class="horizontal-tables">
+                    <table id="tablaop1">
+                        <tr>
+                            <th>Codigo del cliente</th>
+                        </tr>
+                    </table>
+                    <table id="tablaop2">
+                        <tr>
+                            <th>Costo del cliente</th>
+                        </tr>
+                    </table>
+                    <table id="tablaop3">
+                        <tr>
+                            <th>Tipo de video</th>
+                        </tr>
+                    </table>
+                    <table id="tablaop4">
+                        <tr>
+                            <th>Monto del incremento</th>
+                        </tr>
+                    </table>
+                    <table id="tablaop5">
+                        <tr>
+                            <th>Total a pagar</th>
+                        </tr>
+                    </table>
+                </div>
+                <p>Total cancelado por clientes de video: <span id="opTotal2"></span></p>
             </div>
-            
-            <p>El total cancelado por todos los clientes de video es de <span id="opTotal2"></span></p>
         </div>
     </section>
 
-
 </body>
+
+<script type="module" 
+src="./main.js"></script>
+
+
 </html>

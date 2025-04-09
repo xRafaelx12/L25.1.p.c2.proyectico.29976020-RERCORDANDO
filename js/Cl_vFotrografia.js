@@ -1,9 +1,10 @@
 import Cl_mFotografia from "./Cl_mFotografia.js";
-import Cl_vCliente from "./Cl_vCliente.js";
-export default class Cl_vFotografia extends Cl_vCliente{
+
+export default class Cl_vFotografia{
     constructor(){
-        super(inCodigo,inCosto)
         this.controller=null
+        this.inCodigo=document.getElementById("inCodigo1")
+        this.inCosto=document.getElementById("inCosto1")
         this.tabla1=document.getElementById("tabla1op")
         this.tabla2=document.getElementById("tabla2op")
         this.tabla3=document.getElementById("tabla3op")
@@ -14,7 +15,16 @@ export default class Cl_vFotografia extends Cl_vCliente{
         this.btProcessData=document.getElementById("btProcesarDataPhotografi")
         this.inTipoFotogracia=document.getElementById("inTipoFotografia")
 
-        this.btProcessData.onclick = () => this.controller.processDataAndAddFotografia()
+        this.instanceVFotograica= new Cl_vFotografia()
+        this.instanceVFotograica.btProcessData.onclick = () => this.controller.processDataAndAddFotografia()
+    }
+
+    get incodicoExtractValue(){
+        return this.inCodigo.value
+    }
+
+    get inCostoExtractValue(){
+        return this.inCosto.value
     }
 
     get inTipoFotograciaExtractValue(){
@@ -22,7 +32,7 @@ export default class Cl_vFotografia extends Cl_vCliente{
     }
 
     processModelFotografia(){
-        this.iModelFotografia= new Cl_mFotografia(this.inCodigo.value,this.inCosto.value,this.inTipoFotogracia.value)
+        this.iModelFotografia= new Cl_mFotografia(this.instanceVFotograica.incodicoExtractValue,this.instanceVFotograica.inCostoExtractValue,this.instanceVFotograica.inTipoFotograciaExtractValue)
         return this.iModelFotografia 
     }
 

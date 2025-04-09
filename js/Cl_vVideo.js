@@ -1,11 +1,11 @@
 import Cl_mVideo from "./Cl_mVideo.js";
-import Cl_vCliente from "./Cl_vCliente.js";
-export default class Cl_vVideo extends Cl_vCliente{
+
+export default class Cl_vVideo{
 
     constructor(){
-
-        super(inCodigo,inCosto)
         this.controller=null
+        this.inCodigo=document.getElementById("inCodigo2")
+        this.inCosto=document.getElementById("inCosto2")        
         this.tabla1=document.getElementById("tablaop1")
         this.tabla2=document.getElementById("tablaop2")
         this.tabla3=document.getElementById("tablaop3")
@@ -14,8 +14,18 @@ export default class Cl_vVideo extends Cl_vCliente{
         this.btProcessDataInVideo=document.getElementById("btProcessDataInVideo")
         this.opTotal=document.getElementById("opTotal2")
         this.inHd=document.getElementById("inHd")
-        
-        this.btProcessDataInVideo.onclick = ()=>this.controller.processDataAndAdddVideo()
+
+        this.instanceViewVIdeo= new Cl_vVideo()
+        this.instanceViewVIdeo.btProcessDataInVideo.onclick = ()=>this.controller.processDataAndAdddVideo()
+    }
+
+
+    get incodicoExtractValue(){
+        return this.inCodigo.value
+    }
+
+    get inCostoExtractValue(){
+        return this.inCosto.value
     }
 
     get inHdExtractValue(){
@@ -23,7 +33,7 @@ export default class Cl_vVideo extends Cl_vCliente{
     }
 
     processModelVideo(){
-        this.instanceModelVideo= new Cl_mVideo(this.inCodigo.value,this.inCosto.value,this.hd.value)
+        this.instanceModelVideo= new Cl_mVideo(this.incodicoExtractValue,this.inCostoExtractValue,this.inHdExtractValue)
         return this.instanceModelVideo
     }
 

@@ -2,7 +2,7 @@ import Cl_mCliente from "./Cl_mCliente.js";
 export default class Cl_mFotografia extends Cl_mCliente{
     constructor(codigo,costo,tipoFoto){
      super(codigo,costo)
-     this._tipoFoto=tipoFoto
+     this.tipoFoto=tipoFoto
 
     }
 

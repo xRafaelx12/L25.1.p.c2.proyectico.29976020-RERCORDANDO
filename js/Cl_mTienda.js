@@ -10,7 +10,7 @@ export default class Cl_mTienda{
 
     //METHOD TO PROCESS  IN THE MODEL PHOTOGRAFI
     processAndSaveDataInFotografia(fotografia){
-        this.counterTotalPhotografi+=this.totalPayedByClientes()
+        this.counterTotalPhotografi+=this.fotografia.totalPayedByClientes()
         if(fotografia.tipoFoto===1){
             this.counterDigitalPicture++
         }
